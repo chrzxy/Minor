@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Решение алгоритмической задачи</title>
+</head>
+
+<body>
+    <p id="formulation">Дано вещественное число A. Вычислить х = a²+4+5 при а < 62; в противном случае x = 1/(a²) + 4a + 5</p>
+    <form id="UserEnter" name="UserEnter" target="_blank">
+        <ul>
+            <li>Для поисковика:<input name="q" id="q" value="search"></li>
+            <li>Формулировка задачи 
+                <br><textarea cols="60" rows="4" id="task" name="formulation">Дано вещественное число A. Вычислить х = a²+4+5 при а < 62; в противном случае x = 1/(a²) + 4a + 5</textarea></li>
+            <li>a: <input id="a" name="a" type="number" step="any" value="10"></li>
+            <li>Результат решения задачи: <input id="result" name="result" value="не определен"></li>
+            <li>действие 1: <input id="verify" type="button" value="Проверить"></li>
+            <li>действие 2: <input id="send" type="button" value="Отправить выражение в Bing"></li>
+        </ul>
+    </form>
+
+    <script>
+        const aInput = document.getElementById('a');
+        const resultInput = document.getElementById('result');
+        const verifyButton = document.getElementById('verify');
+        const sendButton = document.getElementById('send');
+        const formulationTextarea = document.getElementById('task');
+        const qInput = document.getElementById('q');
+
+        let currentResult = null;
+        let currentFormula = "";
+
+        function calculateResult() {
+            const a = parseFloat(aInput.value);
+            
+            if (isNaN(a)) {
+                resultInput.value = "Ошибка: введите число!";
+                currentResult = null;
+                return;
+            }
+            
+            let result;
+        
+            if (a < 62) {
+                result = Math.pow(a, 2) + 4 + 5;
+                currentFormula = `${a}² + 4 + 5`;
+            } else {
+                if (a === 0) {
+                    resultInput.value = "Ошибка: деление на ноль!";
+                    currentResult = null;
+                    return;
+                }
+                result = (1 / Math.pow(a, 2)) + (4 * a) + 5;
+                currentFormula = `1/(${a}²) + 4*${a} + 5`;
+            }
+   
+            resultInput.value = result.toFixed(6);
+            currentResult = result;
+         
+            updateSearchQuery();
+        }
+
+        function updateSearchQuery() {
+            if (currentFormula) {
+                const searchText = `${currentFormula}`;
+                qInput.value = searchText;
+            }
+        }
+
+        function sendData() {
+            if (!currentFormula) {
+                alert("Сначала вычислите корректный результат!");
+                return;
+            }
+            
+        
+            const searchQuery = encodeURIComponent(qInput.value);
+            const bingUrl = `https://www.bing.com/search?q=${searchQuery}`;
+          
+            window.open(bingUrl, '_blank');
+            
+            console.log("Отправлено выражение в Bing:", currentFormula);
+            console.log("Наш вычисленный результат:", currentResult);
+        }
+
+        verifyButton.addEventListener('click', calculateResult);
+        sendButton.addEventListener('click', sendData);
+        
+        aInput.addEventListener('input', calculateResult);
+        aInput.addEventListener('change', calculateResult);
+        
+        formulationTextarea.addEventListener('input', function() {
+            const formulationParagraph = document.getElementById('formulation');
+            formulationParagraph.textContent = this.value;
+        });
+
+        window.addEventListener('load', calculateResult);
+    </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Паспорт</title>
+
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-image: url('https://textur.gas-kvas.com/uploads/posts/2024-10/textur-gas-kvas-com-fcvz-p-tekstura-fon-zelenii-tsvet-19.jpg');
+            /* Замените на ваш URL */
+            background-size: cover;
+            color: white;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .image-cell {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        body {
+            font-family: Copperplate, Papyrus, fantasy;
+            background-color: #f4fbff;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.nav {
+            margin: 20px auto;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        ul.nav a {
+            display: block;
+            padding: 10px 15px;
+            background-color: #feffff;
+            border: 2px dashed #008dcf;
+            text-decoration: none;
+            color: #68d7ed;
+            text-align: center;
+            min-width: 5em;
+        }
+
+        ul.nav a:hover {
+            background-color: #f4fbff;
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Смешарики_логотип.png"
+                style="width: 200px; height: auto; display: block; margin: 0 auto;">
+            <h1
+                style="color: #5dcbe1; margin-top: 20px; text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;">
+                СМЕШАРИКИ И ВСЁ, ЧТО С НИМИ СВЯЗАНО</h1>
+        </div>
+        <ul class="nav">
+            <li><a name="top" href="index.html">Главная</a></li>
+            <li><a href="Паспорт.html" class="active">Паспорт</a></li>
+            <li><a href="Персонажи.html">Персонажи</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/Смешарики">История создания</a></li>
+            <li><a href="Заказатьмерч.html">Заказать мерч</a></li>
+        </ul>
+        <a href="решениезадачи.html">Решение алгоритмической задачи</a>
+
+        <div>
+            <table align="left" cellspacing="0" cellpadding="10" border="1" width="700px" <tr>
+                <td height="200px" colspan="4" align="center" valign="top">
+                    РОССИЙСКАЯ ФЕДЕРАЦИЯ</tr>
+                    <tr>
+                        <td height="200px" colspan="3" align="left" valign="top">
+                            Паспорт выдан МВД РФ
+                        <td height="200px">
+                            4444 4444
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" height="200px">
+                            Дата выдачи
+                            <span>19.03.2020</span>
+                        </td>
+                        <td height="200px">
+                            Код подразделения
+                            <span>123</span>
+                        <td height="200px">
+
+                        <td height="200px">
+                            4444 4444
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td height="200px" colspan="3" align="right">
+                            <span>123</span><br>Личный код
+                        <td height="200px">
+                            4444 4444
+                    </tr>
+                <td rowspan="5" width="220px" align="right" valign="bottom">
+                    <img src="https://static.insales-cdn.com/images/products/1/6896/479894256/RM316_Дракула__Монстры_на_каникулах__875х1700_мм.jpg"
+                        width="200">
+                </td>
+
+                <td height="100px" colspan="3" align="left">
+                    Фамилия <span id="surname"> Жорова </span>
+
+                </td>
+                </tr>
+                <tr>
+                    <td height="20px" colspan="3" align="left">
+                        Имя <span id="name"> Камила </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px" colspan="3" align="left">
+                        Отчество <span id="fathersname"> Юрьевна </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td height="20px" align="left">
+                        Пол <span id="sex"> ЖЕН </span>
+                    </td>
+
+                    <td height="20px" align="left">
+                        Дата рождения <span id="date of birth"> 03.01.2006 </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td height="100px" align="left">
+                        Место рождения <span id="place of birth"> Дубай </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+       <button id="for_click">Переключить на латиницу</button>
+    <script>
+     
+        let isLatin = false;
+        
+    
+        const originalData = {
+            lastname: "Жорова",
+            firstname: "Камила",
+            fathersname: "Юрьевна"
+        };
+        
+        function transliterate(text) {
+            const cyrillicToLatin = {
+                'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd',
+                'е': 'e', 'ё': 'yo', 'ж': 'zh', 'з': 'z', 'и': 'i',
+                'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
+                'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't',
+                'у': 'u', 'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch',
+                'ш': 'sh', 'щ': 'shch', 'ъ': '', 'ы': 'y', 'ь': '',
+                'э': 'e', 'ю': 'yu', 'я': 'ya',
+                'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D',
+                'Е': 'E', 'Ё': 'Yo', 'Ж': 'Zh', 'З': 'Z', 'И': 'I',
+                'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M', 'Н': 'N',
+                'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T',
+                'У': 'U', 'Ф': 'F', 'Х': 'Kh', 'Ц': 'Ts', 'Ч': 'Ch',
+                'Ш': 'Sh', 'Щ': 'Shch', 'Ъ': '', 'Ы': 'Y', 'Ь': '',
+                'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya'
+            };
+            
+            return text.split('').map(char => {
+                return cyrillicToLatin[char] || char;
+            }).join('');
+        }
+
+  
+        function find_edit() {
+   
+            const surname = document.getElementById('surname');
+            const name = document.getElementById('name');
+            const fathersname = document.getElementById('fathersname');
+            
+
+            const status = document.getElementById('status');
+            const button = document.getElementById('for_click');
+            
+            if (!isLatin) {
+          
+                console.log("Переключение на латиницу:");
+                
+                name.innerText = transliterate(name.innerText);
+                surname.innerText = transliterate(surname.innerText);
+                fathersname.innerText = transliterate(fathersname.innerText);
+                
+           
+                status.innerText = "Текущий формат: Латиница";
+                status.className = "status latin";
+                button.innerText = "Переключить на кириллицу";
+                
+                isLatin = true;
+            } else {
+               
+                console.log("Возврат к кириллице:");
+                
+                surname.innerText = originalData.surname;
+                name.innerText = originalData.name;
+                fathersname.innerText = originalData.fathersname;
+                
+                
+                
+                status.innerText = "Текущий формат: Кириллица";
+                status.className = "status cyrillic";
+                button.innerText = "Переключить на латиницу";
+            
+                
+                isLatin = false;
+            }
+            
+            console.log("Жорова" + surname.innerText);
+            console.log("Камила" + name.innerText);
+            console.log("Юрьевна" + fathersname.innerText);
+          
+        }
+
+      
+        const node_for_click = document.getElementById("for_click");
+        node_for_click.addEventListener("click", find_edit);
+    </script>
+
+        <table>
+            <tr>
+                <th>Компания</th>
+                <th>Ссылка</th>
+                <th>Логотип</th>
+            </tr>
+            <tr>
+                <td>Google</td>
+                <td><a href="https://www.google.com">Перейти на сайт</a></td>
+                <td class="image-cell">
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                        width="100" alt="Логотип Google">
+                </td>
+            </tr>
+            <tr>
+                <td>Wikipedia</td>
+                <td><a href="https://www.wikipedia.org">Открыть энциклопедию</a></td>
+                <td class="image-cell">
+                    <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png"
+                        width="100" alt="Логотип Wikipedia">
+                </td>
+            </tr>
+        </table>
+</body>
+
+</html>
+
+
+<a href="DOMjs.html">DOM_JS. Считываем информацию из DOM</a>
+</body>
+
+</html>
