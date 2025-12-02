@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styleall.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="text-center mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Смешарики_логотип.png" class="img-fluid"
+                style="max-width: 200px;" alt="Смешарики логотип">
+            <h1 class="hero-title">СМЕШАРИКИ И ВСЁ, ЧТО С НИМИ СВЯЗАНО</h1>
+        </header>
+
+        <div class="card" id="top_of_page">
+            <div class="card-body text-center">
+                <nav class="simple-nav">
+                    <a class="simple-nav-link" href="index.html">Главная</a>
+                    <a class="simple-nav-link" href="boot.html">Магазин</a>
+                    <a class="simple-nav-link" href="zakazmerch.html">Форма</a>
+                    <a class="simple-nav-link active" href="zadacha.html">Решение алгоритмической задачи</a>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="card card-custom light-block">
+            <p id="formulation">Дано вещественное число A. Вычислить х = a²+4+5 при а < 62; в противном случае x=1/(a²)
+                    + 4a + 5</p>
+                    <form id="UserEnter" name="UserEnter" target="_blank">
+                        <ul>
+                            <li>Для поисковика:<input name="q" id="q" value="search"></li>
+                            </li>
+                            <li>a: <input id="a" name="a" type="number" step="any" value="10"></li>
+                            <li>Результат решения задачи: <input id="result" name="result" value="не определен"></li>
+                            <li>действие 1: <input id="verify" type="button" value="Проверить"></li>
+                            <li>действие 2: <input id="send" type="button" value="Отправить выражение в Bing"></li>
+                        </ul>
+                    </form>
+
+                    <script>
+                        const aInput = document.getElementById('a');
+                        const resultInput = document.getElementById('result');
+                        const verifyButton = document.getElementById('verify');
+                        const sendButton = document.getElementById('send');
+                        const formulationTextarea = document.getElementById('task');
+                        const qInput = document.getElementById('q');
+
+                        let currentResult = null;
+                        let currentFormula = "";
+
+                        function calculateResult() {
+                            const a = parseFloat(aInput.value);
+
+                            if (isNaN(a)) {
+                                resultInput.value = "Ошибка: введите число!";
+                                currentResult = null;
+                                return;
+                            }
+
+                            let result;
+
+                            if (a < 62) {
+                                result = Math.pow(a, 2) + 4 + 5;
+                                currentFormula = `${a}² + 4 + 5`;
+                            } else {
+                                if (a === 0) {
+                                    resultInput.value = "Ошибка: деление на ноль!";
+                                    currentResult = null;
+                                    return;
+                                }
+                                result = (1 / Math.pow(a, 2)) + (4 * a) + 5;
+                                currentFormula = `1/(${a}²) + 4*${a} + 5`;
+                            }
+
+                            resultInput.value = result.toFixed(6);
+                            currentResult = result;
+
+                            updateSearchQuery();
+                        }
+
+                        function updateSearchQuery() {
+                            if (currentFormula) {
+                                const searchText = `${currentFormula}`;
+                                qInput.value = searchText;
+                            }
+                        }
+
+                        function sendData() {
+                            if (!currentFormula) {
+                                alert("Сначала вычислите корректный результат!");
+                                return;
+                            }
+
+
+                            const searchQuery = encodeURIComponent(qInput.value);
+                            const bingUrl = `https://www.bing.com/search?q=${searchQuery}`;
+
+                            window.open(bingUrl, '_blank');
+
+                            console.log("Отправлено выражение в Bing:", currentFormula);
+                            console.log("Наш вычисленный результат:", currentResult);
+                        }
+
+                        verifyButton.addEventListener('click', calculateResult);
+                        sendButton.addEventListener('click', sendData);
+
+                        aInput.addEventListener('input', calculateResult);
+                        aInput.addEventListener('change', calculateResult);
+
+                        formulationTextarea.addEventListener('input', function () {
+                            const formulationParagraph = document.getElementById('formulation');
+                            formulationParagraph.textContent = this.value;
+                        });
+
+                        window.addEventListener('load', calculateResult);
+                    </script>
+        </div>
+         <a href="#top_of_page" class="back-to-top">В оглавление</a>
+</body>
+
+</html>
