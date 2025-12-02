@@ -1,0 +1,204 @@
+@media (max-width: 768px) {
+    * {
+        transition: none !important;
+    }
+}
+.card-subtitle {
+  margin-top: 1.5rem;
+}
+.active {
+    color: red !important;
+}
+
+body {
+    font-family: Copperplate, Papyrus, fantasy;
+    background-image: url('https://i.pinimg.com/originals/06/a7/50/06a750c08e63fa1dbd326cf8712b293b.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 20px;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+}
+
+.navbar-custom {
+    background-color: rgba(254, 255, 255, 0.9);
+}
+
+.nav-link-custom {
+    color: #68d7ed !important;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 2px dashed #008dcf;
+    border-radius: 5px;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    background-color: #f4fbff;
+    color: #68d7ed;
+}
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    color: #5dcbe1;
+    margin: 20px 0;
+}
+
+.frame-container {
+    background-image: url('https://shablon.klev.club/uploads/posts/2024-09/shablon-klev-club-bghf-p-shabloni-ramka-smeshariki-7.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 400px;
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.frame-list {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.frame-list li {
+    padding: 8px 0;
+    margin: 5px 0;
+
+}
+
+.section-title {
+    color: #5cd7fd;
+
+    margin-bottom: 20px;
+}
+
+.facts-section {
+    background-color: #5cadd9;
+    color: #f7fafb;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.facts-section li {
+    margin-bottom: 15px;
+
+}
+
+.card-custom {
+    border: 3px solid #ff69b4;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.img-fluid-custom {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #5cd7fd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-navigation {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px dashed #008dcf;
+}
+
+.section-link {
+    color: #5cd7fd;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.section-link:hover {
+    background-color: #f4fbff;
+    text-decoration: underline;
+}
+
+.card-link {
+    color: #5cd7fd;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.section-subtitle {
+    color: #5cadd9;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff69b4;
+    padding-bottom: 5px;
+}
+
+#Наброски {
+    color: #ffffff;
+}
+
+.light-block,
+.light-block * {
+    text-shadow: none !important;
+    color: #333;
+}
+
+
+.simple-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.simple-nav-link {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    color: #68d7ed !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: 2px dashed #008dcf !important;
+}
+
+.simple-nav-link:hover,
+.simple-nav-link.active {
+    background-color: rgba(104, 215, 237, 0.2);
+    text-decoration: none;
+}
