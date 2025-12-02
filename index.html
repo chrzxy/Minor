@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смешарики - Главная</title>
+
+
+      <link rel="stylesheet" href="styles.css">
+     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
+    
+
+
+    <style>
+        body {
+            font-family: Copperplate, Papyrus, fantasy;
+            background-image: url('https://i.pinimg.com/originals/06/a7/50/06a750c08e63fa1dbd326cf8712b293b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 20px;
+        }
+
+        .navbar-custom {
+            background-color: rgba(254, 255, 255, 0.9);
+            border-bottom: 2px dashed #008dcf;
+        }
+
+        .nav-link-custom {
+            color: #68d7ed !important;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: 2px dashed #008dcf;
+            border-radius: 5px;
+        }
+
+        .nav-link-custom:hover,
+        .nav-link-custom.active {
+            background-color: #f4fbff;
+            color: #68d7ed;
+        }
+
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            color: #5dcbe1;
+            text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+            margin: 20px 0;
+        }
+
+        .frame-container {
+            background-image: url('https://shablon.klev.club/uploads/posts/2024-09/shablon-klev-club-bghf-p-shabloni-ramka-smeshariki-7.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 400px;
+            padding: 50px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .frame-list {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .frame-list li {
+            padding: 8px 0;
+            margin: 5px 0;
+            text-shadow: 0.5px 0.5px 0 black, -0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black;
+        }
+
+        .section-title {
+            color: #5cd7fd;
+            text-shadow: 0.5px 0.5px 0 black, -0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black;
+            margin-bottom: 20px;
+        }
+
+        .facts-section {
+            background-color: #5cadd9;
+            color: #f7fafb;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .facts-section li {
+            margin-bottom: 15px;
+            text-shadow: 0.5px 0.5px 0 black, -0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black;
+        }
+
+        .card-custom {
+            border: 3px solid #ff69b4;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-fluid-custom {
+            max-width: 100%;
+            border-radius: 10px;
+            filter: drop-shadow(0px 0px 0.5px #00000020);
+            margin-bottom: 15px;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #5cd7fd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+     
+        <header class="text-center mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Смешарики_логотип.png" 
+                 class="img-fluid" style="max-width: 200px;" alt="Смешарики логотип">
+            <h1 class="hero-title">СМЕШАРИКИ И ВСЁ, ЧТО С НИМИ СВЯЗАНО</h1>
+        </header>
+
+   <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Персонажи.html">Персонажи</a></li>
+                    <li class="nav-item"><a class="nav-link" href="boot.html">Магазин</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="Заказатьмерч.html">Форма</a></li>
+                    <li class="nav-item"><a class="nav-link " href="решениезадачи.html">Решение алгоритмической задачи</a></li>
+                </ul>
+            </div>
+
+     
+        <div class="content-wrapper">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="frame-container">
+                        <ul class="frame-list">
+                            <li><a href="#Фанфакты" class="text-white text-decoration-none">Фанфакты</a></li>
+                            <li><a href="#Шарарам" class="text-white text-decoration-none">Шарарам</a></li>
+                            <li><a href="#Наброски" class="text-white text-decoration-none">Изначальные наброски смешариков</a></li>
+                        </ul>
+                        <img src="https://img-fotki.yandex.ru/get/4704/16969765.21d/0_8e65b_2743b2fb_orig.png" 
+                             class="d-none d-md-block position-absolute" style="right: 20px; width: 200px;" alt="Смешарики">
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="https://foni.papik.pro/uploads/posts/2024-09/foni-papik-pro-97lp-p-kartinki-smeshariki-na-prozrachnom-fone-2.png" 
+                         class="img-fluid-custom" alt="Смешарики">
+                </div>
+            </div>
+        </div>
+
+        <div class="facts-section" id="Фанфакты">
+            <h3 class="section-title text-center">Фанфакты</h3>
+            <ol>
+                <li>
+                    <strong>Сколько лет Смешарикам?</strong> Существуют разные возрастные категории: Крош с Ёжиком —
+                    дети в районе 10 лет, Бараш с Нюшей — подростки по 15−16 лет, есть среднее поколение 35−40 лет —
+                    Лосяш и Пин, а есть персонажи пенсионного возраста, за 60: Кар-Карыч и Совунья.
+                </li>
+                <li>
+                    <strong>Круглая форма персонажей</strong> демонстрирует их дружелюбность и делает лёгкими для
+                    воспроизведения детскими руками. Дети пяти-семи лет могут нарисовать кружок, сверху добавить
+                    треугольничков — вот вам и ёжик.
+                </li>
+                <li>
+                    <strong>Отсылки к кинематографу.</strong> В «Смешариках» есть множество отсылок к кинематографу.
+                    Например, «Бутерброд» — отсылка на фильм ужасов Альфреда Хичкока «Психо», а сюжет серии «Марафонец»
+                    — на ленту «Форрест Гамп». В эпизоде «Новые зубы Кроша» Совунья достаёт аппарат, на котором написано
+                    «Р2Д2». Данная надпись является именем одного из роботов космической саги «Звёздные войны». Стоит
+                    отметить, что робот R2D2 послужил прототипом Биби.
+                </li>
+                <li>
+                    <strong>Отсутствие отрицательных героев.</strong> Среди основных персонажей нет отрицательных
+                    героев. Команда создателей сериала отказалась от традиционной фабулы, основанной на противостоянии
+                    «хороших» и «плохих». Коллизии сюжетов рождаются из взаимодействия персонажей, их искреннего и
+                    любознательного отношения друг к другу и к жизни.
+                </li>
+                <li>
+                    <strong>Лосяш-амбидекстр.</strong> Лосяш — амбидекстр, но в большинстве случаев карандаш он держит в
+                    левой.
+                </li>
+                <li>
+                    <strong>Французская басня Бараша.</strong> В эпизоде «Забыть всё» Бараш читает первые строчки басни
+                    Жана Де Лафонтена «Цикада и муравей»:<br>
+                    «La cigale ayant chanté tout l'été,<br>
+                    Se trouva fort dépourvue<br>
+                    Quand la bise fut venue»
+                </li>
+                <li>
+                    <strong>Эволюция женских персонажей.</strong> Нюша изначально планировалась как единственный женский
+                    персонаж и более рассудительная и спокойная, затем получилась полная противоположность. Чтобы
+                    уравновесить её экспрессивный характер, в сериал ввели умудрённую жизнью Совунью.
+                </li>
+            </ol>
+        </div>
+
+     
+        <div class="card card-custom" id="Шарарам">
+            <div class="card-body text-center">
+                <h3 class="section-title">Карта шарарама</h3>
+            </div>
+            <img src="https://static.wikia.nocookie.net/shararam-smeshi/images/2/2a/Страна2021.png/revision/latest?cb=20210101043708&path-prefix=ru" 
+                 class="card-img-top" alt="Карта Шарарама">
+            <div class="card-body text-center">
+                <a href="#Наброски" class="section-title text-decoration-none">Изначальные наброски смешариков</a>
+            </div>
+        </div>
+
+        <div class="row" id="Наброски">
+            <div class="col-md-4 text-center">
+                <img src="https://tlum.ru/uploads/74997de545b4e960705063a4834575e7592842a1faaf3e2dc53203206cc8cab1.jpeg" 
+                     class="img-fluid-custom" alt="Наброски смешариков">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://i.pinimg.com/736x/96/57/13/96571302d0cbc8df4e230a6b5f79c01e.jpg" 
+                     class="img-fluid-custom" alt="Наброски смешариков">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://static.wikia.nocookie.net/smesharikiarhives/images/7/72/Зарисовки_смешариков.png/revision/latest?cb=20230601204503&path-prefix=ru" 
+                     class="img-fluid-custom" alt="Наброски смешариков">
+            </div>
+        </div>
+
+  
+        <a href="#" class="back-to-top">Наверх</a>
+    </div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="styles.css">
+     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
+    <!-- Custom Styles -->
+
+
+    <style>
+        body {
+            font-family: Copperplate, Papyrus, fantasy;
+            background-image: url('https://i.pinimg.com/originals/06/a7/50/06a750c08e63fa1dbd326cf8712b293b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 20px;
+        }
+
+        .navbar-custom {
+            background-color: rgba(254, 255, 255, 0.9);
+            border-bottom: 2px dashed #008dcf;
+        }
+
+        .nav-link-custom {
+            color: #68d7ed !important;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: 2px dashed #008dcf;
+            border-radius: 5px;
+        }
+
+        .nav-link-custom:hover,
+        .nav-link-custom.active {
+            background-color: #f4fbff;
+            color: #68d7ed;
+        }
+
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            color: #5dcbe1;
+            text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+            margin: 20px 0;
+        }
+
+        .frame-container {
+            background-image: url('https://shablon.klev.club/uploads/posts/2024-09/shablon-klev-club-bghf-p-shabloni-ramka-smeshariki-7.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 400px;
+            padding: 50px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .frame-list {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .frame-list li {
+            padding: 8px 0;
+            margin: 5px 0;
+            text-shadow: 0.5px 0.5px 0 black, -0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black;
+        }
+
+        .section-title {
+            color: #5cd7fd;
+            text-shadow: 0.5px 0.5px 0 black, -0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black;
+            margin-bottom: 20px;
+        }
+
+        .facts-section {
+            background-color: #5cadd9;
+            color: #f7fafb;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .facts-section li {
+            margin-bottom: 15px;
+            text-shadow: 0.5px 0.5px 0 black, -0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black;
+        }
+
+        .card-custom {
+            border: 3px solid #ff69b4;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-fluid-custom {
+            max-width: 100%;
+            border-radius: 10px;
+            filter: drop-shadow(0px 0px 0.5px #00000020);
+            margin-bottom: 15px;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #5cd7fd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+     
+        <header class="text-center mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Смешарики_логотип.png" 
+                 class="img-fluid" style="max-width: 200px;" alt="Смешарики логотип">
+            <h1 class="hero-title">СМЕШАРИКИ И ВСЁ, ЧТО С НИМИ СВЯЗАНО</h1>
+        </header>
+
+   <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Персонажи.html">Персонажи</a></li>
+                    <li class="nav-item"><a class="nav-link" href="boot.html">Магазин</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="Заказатьмерч.html">Форма</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="решениезадачи.html">Решение алгоритмической задачи</a></li>
+                </ul>
+            </div>
+
+     
+
+            <p id="formulation">Дано вещественное число A. Вычислить х = a²+4+5 при а < 62; в противном случае x=1/(a²)
+                    + 4a + 5</p>
+                    <form id="UserEnter" name="UserEnter" target="_blank">
+                        <ul>
+                            <li>Для поисковика:<input name="q" id="q" value="search"></li>
+                            </li>
+                            <li>a: <input id="a" name="a" type="number" step="any" value="10"></li>
+                            <li>Результат решения задачи: <input id="result" name="result" value="не определен"></li>
+                            <li>действие 1: <input id="verify" type="button" value="Проверить"></li>
+                            <li>действие 2: <input id="send" type="button" value="Отправить выражение в Bing"></li>
+                        </ul>
+                    </form>
+
+                    <script>
+                        const aInput = document.getElementById('a');
+                        const resultInput = document.getElementById('result');
+                        const verifyButton = document.getElementById('verify');
+                        const sendButton = document.getElementById('send');
+                        const formulationTextarea = document.getElementById('task');
+                        const qInput = document.getElementById('q');
+
+                        let currentResult = null;
+                        let currentFormula = "";
+
+                        function calculateResult() {
+                            const a = parseFloat(aInput.value);
+
+                            if (isNaN(a)) {
+                                resultInput.value = "Ошибка: введите число!";
+                                currentResult = null;
+                                return;
+                            }
+
+                            let result;
+
+                            if (a < 62) {
+                                result = Math.pow(a, 2) + 4 + 5;
+                                currentFormula = `${a}² + 4 + 5`;
+                            } else {
+                                if (a === 0) {
+                                    resultInput.value = "Ошибка: деление на ноль!";
+                                    currentResult = null;
+                                    return;
+                                }
+                                result = (1 / Math.pow(a, 2)) + (4 * a) + 5;
+                                currentFormula = `1/(${a}²) + 4*${a} + 5`;
+                            }
+
+                            resultInput.value = result.toFixed(6);
+                            currentResult = result;
+
+                            updateSearchQuery();
+                        }
+
+                        function updateSearchQuery() {
+                            if (currentFormula) {
+                                const searchText = `${currentFormula}`;
+                                qInput.value = searchText;
+                            }
+                        }
+
+                        function sendData() {
+                            if (!currentFormula) {
+                                alert("Сначала вычислите корректный результат!");
+                                return;
+                            }
+
+
+                            const searchQuery = encodeURIComponent(qInput.value);
+                            const bingUrl = `https://www.bing.com/search?q=${searchQuery}`;
+
+                            window.open(bingUrl, '_blank');
+
+                            console.log("Отправлено выражение в Bing:", currentFormula);
+                            console.log("Наш вычисленный результат:", currentResult);
+                        }
+
+                        verifyButton.addEventListener('click', calculateResult);
+                        sendButton.addEventListener('click', sendData);
+
+                        aInput.addEventListener('input', calculateResult);
+                        aInput.addEventListener('change', calculateResult);
+
+                        formulationTextarea.addEventListener('input', function () {
+                            const formulationParagraph = document.getElementById('formulation');
+                            formulationParagraph.textContent = this.value;
+                        });
+
+                        window.addEventListener('load', calculateResult);
+                    </script>
+</body>
+
+</html>
