@@ -1,0 +1,34 @@
+{
+  "order": {
+    "customer": {
+      "surname": "Иванов",
+      "name": "Иван",
+      "contact": {
+        "email": "customer@example.com",
+        "phone": "+79001234567"
+      },
+      "delivery": {
+        "address": "ул. Пушкина, д. 10, кв. 5",
+        "city": "Москва",
+        "region": "Московская",
+        "zip": "101000"
+      }
+    },
+    "product": {
+      "character": "Крош",
+      "type": "Футболка",
+      "size": "S",
+      "quantity": 2,
+      "color": "Синий"
+    },
+    "additional": {
+      "comment": "Хочу получить заказ как можно скорее",
+      "termsAccepted": true,
+      "newsletterSubscribed": true
+    },
+    "metadata": {
+      "source": "smeshariki_form",
+      "timestamp": "2023-12-03T10:30:00.000Z"
+    }
+  }
+}
